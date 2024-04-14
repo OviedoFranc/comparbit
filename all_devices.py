@@ -45,9 +45,6 @@ def install_arp():
         else:
             print(f"No se puede instalar arp en {system}.")
 
-# Intentar instalar arp
-# DESCODE ---- install_arp()
-
 def get_all_devices():
     print('RASTREANDO TODOS LOS DISPOSITIVOS EN LA RED LOCAL...')
     full_results = [re.findall('^[\w\?\.]+|(?<=\s)\([\d\.]+\)|(?<=at\s)[\w\:]+', i) for i in os.popen('arp -a')]
